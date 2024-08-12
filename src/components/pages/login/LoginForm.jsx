@@ -5,12 +5,12 @@ function LoginForm() {
     //1- State(Données)
     const [username, setUsername] = useState('')
     const navigate = useNavigate()
+
     //2- Comportements
     const handleSubmit = (e) => {
         e.preventDefault()
-        alert(`Bonjour ${username} `)
         setUsername('')
-        navigate('/order')
+        navigate(`order/${username}`)
     }
     const handleChange = (e) => {
         setUsername(e.target.value)
