@@ -25,11 +25,11 @@ function LoginForm() {
             <input
                 value={username}
                 type="text"
-                placeholder="Entrer votre prenom..."
+                placeholder="Entrer votre prenom"
                 required
                 onChange={handleChange}
             />
-            <button>Accédez à votre espace</button>
+            <button>Accédez à mon espace</button>
         </form>
     )
 }
