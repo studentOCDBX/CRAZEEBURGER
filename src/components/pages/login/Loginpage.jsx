@@ -1,3 +1,4 @@
+import Logo from '../../reusableUi/Logo.jsx'
 import LoginForm from './LoginForm.jsx'
 
 function Loginpage() {
@@ -6,7 +7,7 @@ function Loginpage() {
     //3- Affichage(render)
     return (
         <>
-            {/* <Logo /> */}
+            <Logo />
             <LoginForm />
         </>
     )
