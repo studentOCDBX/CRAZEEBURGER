@@ -16,6 +16,7 @@ const colors = {
     greySemiDark: '#93a2b1',
     greyDark: '#6f737e',
     greyBlue: '#747b91',
+    deepCarrotOrange: '#f56a2c',
 }
 
 const spacing = {
