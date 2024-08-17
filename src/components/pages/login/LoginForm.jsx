@@ -5,6 +5,7 @@ import theme from '../../../theme/index.js'
 import { BsPersonCircle } from 'react-icons/bs'
 import { IoChevronForward } from 'react-icons/io5'
 import TextInput from '../../reusableUi/TextInput.jsx'
+import PrimaryButton from '../../reusableUi/PrimaryButton.jsx'
 
 const LoginFormStyled = styled.form`
     display: flex;
@@ -35,37 +36,10 @@ const LoginFormStyled = styled.form`
         text-align: center;
         margin-bottom: 18px;
     }
-    button {
-        width: 400px;
-        height: 53px;
-        border: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: ${theme.colors.white};
-        font-family: 'Arial', sans-serif;
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 15px;
-        border-radius: 5px;
-        background: ${theme.colors.primary_burger};
-        & .chevronIcon {
-            width: 15px;
-            height: 15px;
-            margin-left: 10px;
-        }
-        &:hover {
-            border: 1px solid ${theme.colors.primary_burger};
-            background: ${theme.colors.white};
-            color: ${theme.colors.primary_burger};
-            cursor: pointer;
-        }
-        &:active {
-            border: 1px solid ${theme.colors.primary_burger};
-            background: ${theme.colors.primary_burger};
-            color: ${theme.colors.white};
-            cursor: pointer;
-        }
+    & .chevronIcon {
+        width: 15px;
+        height: 15px;
+        margin-left: 10px;
     }
 `
 
@@ -97,10 +71,10 @@ function LoginForm() {
                 placeholder={'Entrer votre prenom'}
                 required
             />
-            <button>
-                Accédez à mon espace{' '}
-                <IoChevronForward className="chevronIcon" />
-            </button>
+            <PrimaryButton
+                Label={'Accédez à mon espace'}
+                Icon={<IoChevronForward className="chevronIcon" />}
+            />
         </LoginFormStyled>
     )
 }
