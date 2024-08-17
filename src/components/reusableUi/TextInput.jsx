@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../../theme/index.js'
+import theme from '../../theme/index.js'
 
 const InputStyled = styled.div`
     width: 400px;
@@ -23,7 +23,7 @@ const InputStyled = styled.div`
     }
 `
 
-export default function Input({
+export default function TextInput({
     value,
     onChange,
     Icon,
