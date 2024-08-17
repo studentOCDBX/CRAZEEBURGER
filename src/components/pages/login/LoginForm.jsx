@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import theme from '../../../theme/index.js'
-import { BsPersonCircle } from 'react-icons/bs'
 import { IoChevronForward } from 'react-icons/io5'
+import Input from './Input.jsx'
 
 const LoginFormStyled = styled.form`
     display: flex;
@@ -110,16 +110,8 @@ function LoginForm() {
             <h1>Bienvenue chez nous!</h1>
             <hr />
             <h2>Connectez-vous</h2>
-            <div className="inputContainer">
-                <BsPersonCircle className="personIcone" />
-                <input
-                    value={username}
-                    type="text"
-                    placeholder="Entrer votre prenom"
-                    required
-                    onChange={handleChange}
-                />
-            </div>
+            <Input value={username} onChange={handleChange} />
+
             <button>
                 Accédez à mon espace{' '}
                 <IoChevronForward className="chevronIcon" />
