@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import theme from '../../../theme/index.js'
 import { BsPersonCircle } from 'react-icons/bs'
 import { IoChevronForward } from 'react-icons/io5'
-import Input from './Input.jsx'
+import TextInput from '../../reusableUi/TextInput.jsx'
 
 const LoginFormStyled = styled.form`
     display: flex;
@@ -90,7 +90,7 @@ function LoginForm() {
             <h1>Bienvenue chez nous!</h1>
             <hr />
             <h2>Connectez-vous</h2>
-            <Input
+            <TextInput
                 Icon={<BsPersonCircle className="personIcone" />}
                 value={username}
                 onChange={handleChange}
