@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import theme from '../../../theme/index.js'
+import { BsPersonCircle } from 'react-icons/bs'
 import { IoChevronForward } from 'react-icons/io5'
 import Input from './Input.jsx'
 
@@ -33,27 +34,6 @@ const LoginFormStyled = styled.form`
         line-height: 46px;
         text-align: center;
         margin-bottom: 18px;
-    }
-    .inputContainer {
-        width: 400px;
-        height: 55px;
-        border-radius: ${theme.borderRadius.round};
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-        background: ${theme.colors.white};
-        margin-bottom: 18px;
-        .personIcone {
-            color: ${theme.colors.greyBlue};
-            width: 15px;
-            height: 15px;
-        }
-        & input {
-            width: 324px;
-            height: 19px;
-            border: none;
-        }
     }
     button {
         width: 400px;
@@ -110,8 +90,13 @@ function LoginForm() {
             <h1>Bienvenue chez nous!</h1>
             <hr />
             <h2>Connectez-vous</h2>
-            <Input value={username} onChange={handleChange} />
-
+            <Input
+                Icon={<BsPersonCircle className="personIcone" />}
+                value={username}
+                onChange={handleChange}
+                placeholder={'Entrer votre prenom'}
+                required
+            />
             <button>
                 Accédez à mon espace{' '}
                 <IoChevronForward className="chevronIcon" />
