@@ -3,20 +3,22 @@ import logoImg from '../../assets/img/logo.png'
 import theme from '../../theme/index.js'
 
 const LogoStyled = styled.div`
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Amatic SC', cursive;
-    font-weight: 700;
-    margin-bottom: 72px;
+    font-weight: ${theme.fonts.weights.bold};
+    margin-bottom: ${theme.gridUnit * 9}px;
     color: ${theme.colors.primary};
     h1 {
-        font-size: 36px;
-        line-height: 36px;
+        font-size: ${theme.fonts.size.P4};
+        line-height: ${theme.fonts.size.P4};
+        letter-spacing: 1.5px;
     }
     img {
-        width: 80px;
-        height: 60px;
+        width: ${theme.fonts.size.P9};
+        height: ${theme.fonts.size.P6};
     }
     transform: scale(2.5);
 `
