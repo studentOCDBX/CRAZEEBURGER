@@ -8,7 +8,9 @@ const LoginpageStyled = styled.div`
         url(${burgerImg});
     background-size: cover;
     background-position: center;
+    width: 100vw;
     height: 100vh;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;

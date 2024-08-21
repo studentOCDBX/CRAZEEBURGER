@@ -16,15 +16,15 @@ const LoginFormStyled = styled.form`
     max-width: 500px;
     min-width: 400px;
     font-family: 'Amatic SC', cursive;
-    font-weight: 700;
+    font-weight: ${theme.fonts.weights.bold};
     h1 {
         font-size: ${theme.fonts.P5};
         line-height: 61px;
         text-align: center;
-        margin-bottom: 32px;
+        margin-bottom: ${theme.gridUnit * 4}px;
     }
     hr {
-        width: 400px;
+        width: 80%;
         height: 3px;
         margin-bottom: 40px;
         border: 1px solid ${theme.colors.deepCarrotOrange};
@@ -37,9 +37,9 @@ const LoginFormStyled = styled.form`
         margin-bottom: 18px;
     }
     & .chevronIcon {
-        width: 15px;
-        height: 15px;
-        margin-left: 10px;
+        width: ${theme.fonts.P0};
+        height: ${theme.fonts.P0};
+        margin-left: ${theme.spacing.xs};
     }
 `
 

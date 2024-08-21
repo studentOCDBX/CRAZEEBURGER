@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import theme from '../../theme/index.js'
 
 const InputStyled = styled.div`
-    width: 400px;
+    width: 80%;
     height: 55px;
     border-radius: ${theme.borderRadius.round};
     display: flex;
@@ -13,13 +13,17 @@ const InputStyled = styled.div`
     margin-bottom: 18px;
     .personIcone {
         color: ${theme.colors.greyBlue};
-        width: 15px;
-        height: 15px;
+        width: ${theme.fonts.size.P0};
+        height: ${theme.fonts.size.P0};
     }
     & input {
-        width: 324px;
+        width: 80%;
         height: 19px;
         border: none;
+        &::placeholder {
+            color: ${theme.colors.greyMedium};
+            opacity: 1;
+        }
     }
 `
 

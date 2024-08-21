@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import theme from '../../theme/index.js'
 
 const PrimaryButtonStyled = styled.button`
-    width: 400px;
+    width: 80%;
     height: 53px;
     border: none;
     display: flex;
@@ -10,20 +10,21 @@ const PrimaryButtonStyled = styled.button`
     align-items: center;
     color: ${theme.colors.white};
     font-family: 'Arial', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 15px;
-    border-radius: 5px;
-    background: ${theme.colors.primary_burger};
+    font-weight: ${theme.fonts.weights.bold};
+    font-size: ${theme.fonts.size.P0};
+    line-height: ${theme.fonts.size.P0};
+    border-radius: ${theme.borderRadius.round};
+    background: ${theme.colors.primary};
     &:hover {
-        border: 1px solid ${theme.colors.primary_burger};
+        border: 1px solid ${theme.colors.primary};
         background: ${theme.colors.white};
-        color: ${theme.colors.primary_burger};
+        color: ${theme.colors.primary};
         cursor: pointer;
+        transition: 0.5s ease-out;
     }
     &:active {
-        border: 1px solid ${theme.colors.primary_burger};
-        background: ${theme.colors.primary_burger};
+        border: 1px solid ${theme.colors.primary};
+        background: ${theme.colors.primary};
         color: ${theme.colors.white};
         cursor: pointer;
     }
