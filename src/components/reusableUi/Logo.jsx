@@ -11,14 +11,17 @@ const LogoStyled = styled.div`
     font-weight: ${theme.fonts.weights.bold};
     margin-bottom: ${theme.gridUnit * 9}px;
     color: ${theme.colors.primary};
-    h1 {
+    & p {
+        margin: 0;
         font-size: ${theme.fonts.size.P4};
         line-height: ${theme.fonts.size.P4};
         letter-spacing: 1.5px;
     }
     img {
-        width: ${theme.fonts.size.P9};
+        width: 50%;
+        /* width: ${theme.fonts.size.P9}; */
         height: ${theme.fonts.size.P6};
+        margin-inline: 5px;
     }
     transform: scale(2.5);
 `
@@ -26,9 +29,9 @@ const LogoStyled = styled.div`
 function Logo() {
     return (
         <LogoStyled>
-            <h1>CRAZEE</h1>
+            <p>CRAZEE</p>
             <img src={logoImg} alt="Logo CrazyBurger" />
-            <h1>BURGER</h1>
+            <p>BURGER</p>
         </LogoStyled>
     )
 }
