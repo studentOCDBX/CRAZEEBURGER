@@ -15,12 +15,12 @@ const PrimaryButtonStyled = styled.button`
     line-height: ${theme.fonts.size.P0};
     border-radius: ${theme.borderRadius.round};
     background: ${theme.colors.primary};
+    transition: 0.5s ease-out;
     &:hover {
         border: 1px solid ${theme.colors.primary};
         background: ${theme.colors.white};
         color: ${theme.colors.primary};
         cursor: pointer;
-        transition: 0.5s ease-out;
     }
     &:active {
         border: 1px solid ${theme.colors.primary};
