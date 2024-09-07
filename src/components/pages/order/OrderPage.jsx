@@ -1,7 +1,8 @@
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import theme from '../../../theme/index.js';
 import Navbar from './Navbar.jsx';
+import Main from './Main.jsx';
 
 const OrderPageSyled = styled.div`
     background: ${theme.colors.primary};
@@ -18,13 +19,6 @@ const OrderPageSyled = styled.div`
         flex-direction: column;
         align-items: center;
     }
-
-    main {
-        width: 100%;
-        background: #1de413;
-        flex: 1; /* or we can use this too  height: calc(95vh - 8vh);
-        without the parent in flexbox */
-    }
 `;
 
 function OrderPage() {
@@ -38,7 +32,7 @@ function OrderPage() {
         <OrderPageSyled>
             <div className="container">
                 <Navbar username={username} />
-                <main>Main</main>
+                <Main />
             </div>
         </OrderPageSyled>
     );
