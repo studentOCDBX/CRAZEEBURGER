@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import logoImg from '../../assets/img/logo.png'
-import theme from '../../theme/index.js'
+import styled from 'styled-components';
+import logoImg from '../../assets/img/logo.png';
+import theme from '../../theme/index.js';
 
 const LogoStyled = styled.div`
     max-width: 100%;
@@ -9,7 +9,6 @@ const LogoStyled = styled.div`
     align-items: center;
     font-family: 'Amatic SC', cursive;
     font-weight: ${theme.fonts.weights.bold};
-    margin-bottom: ${theme.gridUnit * 9}px;
     color: ${theme.colors.primary};
     & p {
         margin: 0;
@@ -19,20 +18,18 @@ const LogoStyled = styled.div`
     }
     img {
         width: 50%;
-        /* width: ${theme.fonts.size.P9}; */
         height: ${theme.fonts.size.P6};
         margin-inline: 5px;
     }
-    transform: scale(2.5);
-`
+`;
 
-function Logo() {
+function Logo({ className }) {
     return (
-        <LogoStyled>
+        <LogoStyled className={className}>
             <p>CRAZEE</p>
             <img src={logoImg} alt="Logo CrazyBurger" />
             <p>BURGER</p>
         </LogoStyled>
-    )
+    );
 }
-export default Logo
+export default Logo;
