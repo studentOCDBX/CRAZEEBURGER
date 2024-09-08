@@ -2,14 +2,12 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const NavbarRightStyled = styled.div`
-    display: grid;
-    grid-template-columns: 40% 60%;
+    display: flex;
     justify-content: center;
     align-items: center;
 
     .nav_right_inner__right {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
         justify-content: center;
         align-items: center;
     }

@@ -1,14 +1,14 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import NavbarRight from './NavbarRight';
+import Logo from '../../reusableUi/Logo.jsx';
 
 const NavbarStyled = styled.nav`
     background: #47ddeb;
-    width: 100%;
     height: 8vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
 
     .nav__left {
         text-align: center;
@@ -17,7 +17,7 @@ const NavbarStyled = styled.nav`
 function Navbar({ username }) {
     return (
         <NavbarStyled>
-            <div className="nav__left">Logo</div>
+            <Logo />
             <NavbarRight username={username} />
         </NavbarStyled>
     );
