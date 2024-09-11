@@ -6,7 +6,6 @@ const UserProfileStyled = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 50px;
     gap: 8px;
 
     .userDescription {

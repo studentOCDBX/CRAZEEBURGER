@@ -5,6 +5,7 @@ const NavbarRightStyled = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding-right: 50px;
 `;
 function NavbarRight({ username }) {
     return (

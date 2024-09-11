@@ -2,9 +2,12 @@ import styled from 'styled-components';
 import NavbarRight from './NavbarRight';
 import Logo from '../../reusableUi/Logo.jsx';
 import { Link } from 'react-router-dom';
+import theme from '../../../theme/index.js';
 
 const NavbarStyled = styled.nav`
-    background: #47ddeb;
+    background: ${theme.colors.white};
+    border-top-left-radius: ${theme.borderRadius.extraRound};
+    border-top-right-radius: ${theme.borderRadius.extraRound};
     height: 8vh;
     display: flex;
     justify-content: space-between;
@@ -21,9 +24,7 @@ const NavbarStyled = styled.nav`
 function Navbar({ username }) {
     return (
         <NavbarStyled>
-            <Link to="/">
-                <Logo />
-            </Link>
+            <Logo />
             <NavbarRight username={username} />
         </NavbarStyled>
     );
