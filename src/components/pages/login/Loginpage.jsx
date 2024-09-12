@@ -1,7 +1,8 @@
-import styled from 'styled-components'
-import Logo from '../../reusableUi/Logo.jsx'
-import LoginForm from './LoginForm.jsx'
-import burgerImg from '../../../assets/img/burgerBackground .jpg'
+import styled from 'styled-components';
+import Logo from '../../reusableUi/Logo.jsx';
+import LoginForm from './LoginForm.jsx';
+import burgerImg from '../../../assets/img/burgerBackground .jpg';
+import theme from '../../../theme/index.js';
 
 const LoginpageStyled = styled.div`
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -10,12 +11,16 @@ const LoginpageStyled = styled.div`
     background-position: center;
     width: 100vw;
     height: 100vh;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-`
+
+    .loginPage__logo {
+        transform: scale(2.5);
+        margin-bottom: ${theme.gridUnit * 9}px;
+    }
+`;
 
 function Loginpage() {
     //1- State(Données)
@@ -23,9 +28,9 @@ function Loginpage() {
     //3- Affichage(render)
     return (
         <LoginpageStyled>
-            <Logo />
+            <Logo className={'loginPage__logo'} />
             <LoginForm />
         </LoginpageStyled>
-    )
+    );
 }
-export default Loginpage
+export default Loginpage;
