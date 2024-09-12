@@ -23,9 +23,9 @@ const LogoStyled = styled.div`
     }
 `;
 
-function Logo({ className }) {
+function Logo({ className, onClick }) {
     return (
-        <LogoStyled className={className}>
+        <LogoStyled className={className} onClick={onClick}>
             <p>CRAZEE</p>
             <img src={logoImg} alt="Logo CrazyBurger" />
             <p>BURGER</p>
