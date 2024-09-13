@@ -10,7 +10,9 @@ const MainStyled = styled.main`
     flex: 1; /* or we can use this too  height: calc(95vh - 8vh);
         without the parent in flexbox */
     display: grid;
-    grid-template-columns: 25% 1fr;
+    /* This code will be use for orderBasket */
+    /* grid-template-columns: 25% 1fr; */
+    grid-template-columns: 1fr;
     .orderBasket {
         background: #6efaf1;
     }
@@ -18,7 +20,7 @@ const MainStyled = styled.main`
 function Main() {
     return (
         <MainStyled>
-            <div className="orderBasket">Basket</div>
+            {/* <div className="orderBasket">Basket</div> */}
             <Menu />
         </MainStyled>
     );
