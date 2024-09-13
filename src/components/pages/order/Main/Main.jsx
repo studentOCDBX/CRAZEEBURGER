@@ -13,6 +13,7 @@ const MainStyled = styled.main`
     /* This code will be use for orderBasket */
     /* grid-template-columns: 25% 1fr; */
     grid-template-columns: 1fr;
+    overflow-y: scroll;
     .orderBasket {
         background: #6efaf1;
     }
