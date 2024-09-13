@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import theme from '../../../../theme/index.js';
+import Menu from './Menu.jsx';
 
 const MainStyled = styled.main`
     background: ${theme.colors.background_white};
@@ -13,15 +14,12 @@ const MainStyled = styled.main`
     .orderBasket {
         background: #6efaf1;
     }
-    .menu {
-        background: green;
-    }
 `;
 function Main() {
     return (
         <MainStyled>
             <div className="orderBasket">Basket</div>
-            <div className="menu">Menu</div>
+            <Menu />
         </MainStyled>
     );
 }
