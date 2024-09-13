@@ -8,6 +8,7 @@ const NavbarStyled = styled.nav`
     background: ${theme.colors.white};
     border-top-left-radius: ${theme.borderRadius.extraRound};
     border-top-right-radius: ${theme.borderRadius.extraRound};
+    border-bottom: 1px solid ${theme.colors.greyLight};
     height: 8vh;
     display: flex;
     justify-content: space-between;
