@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import NavbarRight from './NavbarRight';
-import Logo from '../../reusableUi/Logo.jsx';
-import theme from '../../../theme/index.js';
-import { refreshPage } from '../../../utils/window.js';
+import Logo from '../../../reusableUi/Logo.jsx';
+import theme from '../../../../theme/index.js';
+import { refreshPage } from '../../../../utils/window.js';
 
 const NavbarStyled = styled.nav`
     background: ${theme.colors.white};

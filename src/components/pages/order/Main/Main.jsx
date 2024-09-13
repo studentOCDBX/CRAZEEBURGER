@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../../theme/index.js';
+import theme from '../../../../theme/index.js';
 
 const MainStyled = styled.main`
     background: ${theme.colors.background_white};
