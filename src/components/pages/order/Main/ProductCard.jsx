@@ -1,17 +1,14 @@
 import styled from 'styled-components';
 import PrimaryButton from '../../../reusableUi/PrimaryButton.jsx';
+import { formatPrice } from '../../../../utils/maths.js';
 
 const ProductCardStyled = styled.div`
     background: #ac0404;
     display: grid;
     grid-template-rows: 65% 1fr;
     justify-items: center;
-    height: 330px;
     width: 75%;
-    /* display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; */
+    height: 330px;
     padding: 20px 20px 10px 20px;
 
     .cardImgContainer {
@@ -28,21 +25,22 @@ const ProductCardStyled = styled.div`
         }
     }
     .cardBody {
-        border: 3px solid #e96011;
         width: 200px;
         height: 105px;
         display: grid;
         grid-template-rows: 1fr 1fr;
+        color: #17161a;
         h2 {
             margin: 0;
-            border: 1px solid green;
-            /*  font-family: 'Amatic SC';
-                font-weight: 700;
-                font-size: 36px;
-                line-height: 45px; */
+            font-family: 'Amatic SC';
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 45px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .cardbodyDescription {
-            border: 1px solid green;
             width: 190px;
             height: 66px;
             display: grid;
@@ -65,7 +63,7 @@ function ProductCard({ imageSource, title, price }) {
             <div className="cardBody">
                 <h2> {title} </h2>
                 <div className="cardbodyDescription">
-                    <span> {price} €</span>
+                    <span> {formatPrice(price)} €</span>
                     <PrimaryButton Label={'Ajouter'} className={'cardBtn'} />
                 </div>
             </div>

@@ -18,13 +18,13 @@ function Menu() {
 
     return (
         <MenuStyled>
-            {menu.map((product) => {
+            {menu.map(({ id, imageSource, title, price }) => {
                 return (
                     <ProductCard
-                        key={product.id}
-                        imageSource={product.imageSource}
-                        title={product.title}
-                        price={product.price}
+                        key={id}
+                        imageSource={imageSource}
+                        title={title}
+                        price={price}
                     />
                 );
             })}
