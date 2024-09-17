@@ -3,25 +3,26 @@ import PrimaryButton from '../../../reusableUi/PrimaryButton.jsx';
 import { formatPrice } from '../../../../utils/maths.js';
 
 const ProductCardStyled = styled.div`
-    background: #ac0404;
+    background: #ffffff;
     display: grid;
     grid-template-rows: 65% 1fr;
     justify-items: center;
     width: 75%;
     height: 330px;
     padding: 20px 20px 10px 20px;
+    box-shadow: -8px 8px 20px 0px rgb(0 0 0 / 20%);
+    border-radius: 15px;
 
     .cardImgContainer {
-        /* width: 200px;   width: 80%; equivaut à 63%*/
+        /* width: 200px;  width: 80%; equivaut à 63%*/
         width: 200px;
         height: 145px;
         margin: 30px auto 15px;
-        border: 1px solid #a8ed91d4;
 
         img {
             width: 100%;
             height: 100%;
-            object-fit: fill;
+            object-fit: contain;
         }
     }
     .cardBody {
@@ -47,6 +48,12 @@ const ProductCardStyled = styled.div`
             grid-template-columns: 50% 50%;
             align-items: center;
             padding: 5px;
+            & span {
+                color: #ffa01b;
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 22px;
+            }
             & .cardBtn {
                 width: 95px;
                 height: 38px;

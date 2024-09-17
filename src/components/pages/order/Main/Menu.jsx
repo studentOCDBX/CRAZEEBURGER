@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { fakeMenu1 } from '../../../../fakeData/fakeMenu.js';
+import { fakeMenu2 } from '../../../../fakeData/fakeMenu.js';
 import theme from '../../../../theme/index.js';
 import ProductCard from './ProductCard.jsx';
 
@@ -14,7 +14,7 @@ const MenuStyled = styled.div`
     padding: 50px 50px 150px;
 `;
 function Menu() {
-    const [menu, setMenu] = useState(fakeMenu1);
+    const [menu, setMenu] = useState(fakeMenu2);
 
     return (
         <MenuStyled>
