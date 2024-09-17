@@ -1,22 +1,20 @@
 import styled from 'styled-components';
-import PrimaryButton from '../../../reusableUi/PrimaryButton.jsx';
-import { formatPrice } from '../../../../utils/maths.js';
-import theme from '../../../../theme/index.js';
+import PrimaryButton from './PrimaryButton.jsx';
+import theme from '../../theme/index.js';
 
-const ProductCardStyled = styled.div`
+const CardStyled = styled.div`
     background: ${theme.colors.white};
     display: grid;
     grid-template-rows: 65% 1fr;
     justify-items: center;
     width: 75%;
-    /* height: 330px; */
+    height: 330px;
     height: calc(22 * ${theme.fonts.size.P0});
     padding: 20px 20px 10px 20px;
     box-shadow: -8px 8px 20px 0px rgb(0 0 0 / 20%);
     border-radius: ${theme.borderRadius.extraRound};
 
     .cardImgContainer {
-        /* width: 200px;  width: 80%; equivaut à 63%*/
         width: 200px;
         height: 145px;
         margin: 30px auto 15px;
@@ -63,20 +61,20 @@ const ProductCardStyled = styled.div`
         }
     }
 `;
-function ProductCard({ imageSource, title, price }) {
+function Card({ imageSource, title, priceDescription }) {
     return (
-        <ProductCardStyled className="productCard">
+        <CardStyled>
             <div className="cardImgContainer">
                 <img src={imageSource} alt={title} />
             </div>
             <div className="cardBody">
                 <h2> {title} </h2>
                 <div className="cardbodyDescription">
-                    <span> {formatPrice(price)} €</span>
+                    <span> {priceDescription}</span>
                     <PrimaryButton Label={'Ajouter'} className={'cardBtn'} />
                 </div>
             </div>
-        </ProductCardStyled>
+        </CardStyled>
     );
 }
-export default ProductCard;
+export default Card;

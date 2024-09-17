@@ -2,7 +2,8 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { fakeMenu2 } from '../../../../fakeData/fakeMenu.js';
 import theme from '../../../../theme/index.js';
-import ProductCard from './ProductCard.jsx';
+import Card from '../../../reusableUi/Card.jsx';
+import { formatPrice } from '../../../../utils/maths.js';
 
 const MenuStyled = styled.div`
     background: ${theme.colors.background_white};
@@ -20,11 +21,11 @@ function Menu() {
         <MenuStyled>
             {menu.map(({ id, imageSource, title, price }) => {
                 return (
-                    <ProductCard
+                    <Card
                         key={id}
                         imageSource={imageSource}
                         title={title}
-                        price={price}
+                        priceDescription={formatPrice(price)}
                     />
                 );
             })}
