@@ -14,9 +14,9 @@ const MainStyled = styled.main`
     /* grid-template-columns: 25% 1fr; */
     grid-template-columns: 1fr;
     overflow-y: scroll;
-    .orderBasket {
+    /* .orderBasket {
         background: #6efaf1;
-    }
+    } */
 `;
 function Main() {
     return (

@@ -1,17 +1,19 @@
 import styled from 'styled-components';
 import PrimaryButton from '../../../reusableUi/PrimaryButton.jsx';
 import { formatPrice } from '../../../../utils/maths.js';
+import theme from '../../../../theme/index.js';
 
 const ProductCardStyled = styled.div`
-    background: #ffffff;
+    background: ${theme.colors.white};
     display: grid;
     grid-template-rows: 65% 1fr;
     justify-items: center;
     width: 75%;
-    height: 330px;
+    /* height: 330px; */
+    height: calc(22 * ${theme.fonts.size.P0});
     padding: 20px 20px 10px 20px;
     box-shadow: -8px 8px 20px 0px rgb(0 0 0 / 20%);
-    border-radius: 15px;
+    border-radius: ${theme.borderRadius.extraRound};
 
     .cardImgContainer {
         /* width: 200px;  width: 80%; equivaut à 63%*/
@@ -30,12 +32,12 @@ const ProductCardStyled = styled.div`
         height: 105px;
         display: grid;
         grid-template-rows: 1fr 1fr;
-        color: #17161a;
+        color: ${theme.colors.dark};
         h2 {
             margin: 0;
             font-family: 'Amatic SC';
-            font-weight: 700;
-            font-size: 36px;
+            font-weight: ${theme.fonts.weights.bold};
+            font-size: ${theme.fonts.size.P4};
             line-height: 45px;
             white-space: nowrap;
             overflow: hidden;
@@ -49,8 +51,8 @@ const ProductCardStyled = styled.div`
             align-items: center;
             padding: 5px;
             & span {
-                color: #ffa01b;
-                font-weight: 400;
+                color: ${theme.colors.primary};
+                font-weight: ${theme.fonts.weights.regular};
                 font-size: 1rem;
                 line-height: 22px;
             }

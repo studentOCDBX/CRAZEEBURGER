@@ -9,7 +9,7 @@ const MenuStyled = styled.div`
     box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-row-gap: 60px;
+    grid-row-gap: ${theme.fonts.size.P6};
     justify-items: center;
     padding: 50px 50px 150px;
 `;
