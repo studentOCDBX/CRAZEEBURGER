@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import theme from '../../theme/index.js'
+import styled from 'styled-components';
+import theme from '../../theme/index.js';
 
 const PrimaryButtonStyled = styled.button`
     width: 80%;
@@ -28,13 +28,13 @@ const PrimaryButtonStyled = styled.button`
         color: ${theme.colors.white};
         cursor: pointer;
     }
-`
+`;
 
-export default function PrimaryButton({ Icon, Label }) {
+export default function PrimaryButton({ Icon, Label, className }) {
     return (
-        <PrimaryButtonStyled>
+        <PrimaryButtonStyled className={className}>
             {Label}
             {Icon && Icon}
         </PrimaryButtonStyled>
-    )
+    );
 }

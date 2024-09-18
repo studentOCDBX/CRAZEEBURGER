@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import theme from '../../../theme/index.js';
-import Navbar from './Navbar.jsx';
-import Main from './Main.jsx';
+import Main from './Main/Main.jsx';
+import Navbar from './NavBar/Navbar.jsx';
 
 const OrderPageSyled = styled.div`
     background: ${theme.colors.primary};
