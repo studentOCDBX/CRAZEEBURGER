@@ -8,12 +8,12 @@ const OrderPageSyled = styled.div`
     background: ${theme.colors.primary};
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     .container {
-        width: 1400px;
+        width: 90%;
+        max-width: 1400px;
         height: 95vh;
         display: flex;
         flex-direction: column;

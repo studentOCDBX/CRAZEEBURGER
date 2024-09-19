@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import theme from '../../../../theme/index.js';
 const UserProfileStyled = styled.div`
+    height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
