@@ -12,6 +12,7 @@ const UserProfileStyled = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: end;
         color: ${theme.colors.greyBlue};
         p {
             margin: 0;
@@ -24,12 +25,15 @@ const UserProfileStyled = styled.div`
             color: ${theme.colors.primary};
         }
         a {
+            text-decoration: none;
+        }
+        a p {
             text-align: start;
             font-weight: 400;
             font-size: 10px;
             line-height: 14px;
-            text-decoration: none;
         }
+
         a:hover {
             border-bottom: 1px solid ${theme.colors.greyBlue};
         }
