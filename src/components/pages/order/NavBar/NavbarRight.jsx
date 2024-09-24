@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import UserProfile from './UserProfile.jsx';
-import ToggleButton from './ToggleButton.jsx';
+import ToggleButton from '../../../reusableUi/ToggleButton.jsx';
 
 const NavbarRightStyled = styled.div`
     width: 430px;
