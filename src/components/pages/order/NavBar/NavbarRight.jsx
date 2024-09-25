@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import UserProfile from './UserProfile.jsx';
 import ToggleButton from '../../../reusableUi/ToggleButton.jsx';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import theme from '../../../../theme/index.js';
 import { FaUserSecret } from 'react-icons/fa';
 import { useState } from 'react';
+import 'react-toastify/dist/ReactToastify.css';
+import AdminToast from './AdminToast.jsx';
+import { toast } from 'react-toastify';
 
 const NavbarRightStyled = styled.div`
     height: 100%;
@@ -14,24 +14,6 @@ const NavbarRightStyled = styled.div`
     align-items: center;
     padding-right: 50px;
     column-gap: 10px;
-
-    .toaster {
-        max-width: 300px;
-    }
-
-    .Toastify__toast.Toastify__toast-theme--dark.Toastify__toast--info {
-        background: ${theme.colors.background_dark};
-    }
-
-    .body-toast {
-        .Toastify__toast-icon.Toastify--animate-icon.Toastify__zoom-enter {
-            margin-right: 20px;
-            margin-left: 5px;
-        }
-        div {
-            line-height: 1.3em;
-        }
-    }
 `;
 function NavbarRight({ username }) {
     const [isModeAdmin, setIsModeAdmin] = useState(false);
@@ -55,12 +37,12 @@ function NavbarRight({ username }) {
 
     return (
         <NavbarRightStyled>
-            <ToastContainer className=" toaster" bodyClassName="body-toast" />
             <ToggleButton
                 onToggle={displayToastNotification}
                 labelIfUnchecked="Activer le mode admin"
                 labelIfChecked="Desactiver le mode admin"
             />
+            <AdminToast />
             <UserProfile username={username} />
         </NavbarRightStyled>
     );
