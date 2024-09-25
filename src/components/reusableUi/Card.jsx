@@ -7,7 +7,7 @@ const CardStyled = styled.div`
     display: grid;
     grid-template-rows: 65% 1fr;
     justify-items: center;
-    width: 75%;
+    /* width: 75%; */
     height: 330px;
     height: calc(22 * ${theme.fonts.size.P0});
     padding: 20px 20px 10px 20px;

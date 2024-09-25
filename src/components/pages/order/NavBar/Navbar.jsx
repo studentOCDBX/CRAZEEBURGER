@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import NavbarRight from './NavbarRight';
+import styled from 'styled-components';
 import Logo from '../../../reusableUi/Logo.jsx';
 import theme from '../../../../theme/index.js';
 import { refreshPage } from '../../../../utils/window.js';
